@@ -23,7 +23,7 @@ public class EqualizerField : MonoBehaviour
 					float b = w / 128.0f * (fft.Length - 1);
 					int ib = Mathf.FloorToInt (b);
 					float pb = b - ib;
-					heightMap [0, w] = Mathf.Clamp01((float)fft[ib] * (1 - pb) + (float)fft[ib + 1] * pb);
+					heightMap [h, w] = Mathf.Clamp01((float)fft[ib] * (1 - pb) + (float)fft[ib + 1] * pb);
 				}
 			}
 		}
